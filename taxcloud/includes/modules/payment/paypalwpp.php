@@ -1274,9 +1274,9 @@ if (false) { // disabled until clarification is received about coupons in PayPal
       //TaxCloud hack for PayPal plugin
       $taxCloudTax = $_SESSION['taxcloudTaxTotal']; 
       if ( isset($taxCloudTax)) {
-           $optionsST['TAXAMT']      = round($taxCloudTax,2);
+           $optionsST['PAYMENTREQUEST_0_TAXAMT'] = round($taxCloudTax,2);
            //Update total
-           $optionsST['AMT'] = $optionsST['AMT'] + $taxCloudTax;
+           $optionsST['PAYMENTREQUEST_0_AMT'] = $optionsST['PAYMENTREQUEST_0_AMT'] + $taxCloudTax;
       }
       //End TaxCloud hack
 
